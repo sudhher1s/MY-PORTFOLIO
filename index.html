@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sugandham Sudheer - Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      scroll-behavior: smooth;
+    }
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+    }
+    
+    .skill-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(14, 165, 233, 0.2);
+      transition: all 0.3s ease;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+      border-color: rgba(14, 165, 233, 0.4);
+    }
+    
+    .progress-bar {
+      height: 8px;
+      border-radius: 9999px;
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+      transition: width 1s ease;
+      box-shadow: 0 2px 10px rgba(14, 165, 233, 0.3);
+    }
+    
+    .project-card {
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(10px);
+      border-radius: 1rem;
+      padding: 1.5rem;
+      border: 1px solid rgba(14, 165, 233, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .project-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, transparent 100%);
+      z-index: -1;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);
+      border-color: rgba(14, 165, 233, 0.4);
+    }
+    
+    .project-icon {
+      font-size: 1.5rem;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+      border-radius: 3px;
+    }
+    
+    .contact-link {
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .contact-link:hover {
+      transform: translateY(-3px);
+      text-shadow: 0 5px 15px rgba(14, 165, 233, 0.4);
+    }
+    
+    .floating {
+      animation: floating 3s ease-in-out infinite;
+    }
+    
+    @keyframes floating {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    .wave {
+      animation: wave 2s linear infinite;
+    }
+    
+    @keyframes wave {
+      0% { transform: rotate(0deg); }
+      10% { transform: rotate(14deg); }
+      20% { transform: rotate(-8deg); }
+      30% { transform: rotate(14deg); }
+      40% { transform: rotate(-4deg); }
+      50% { transform: rotate(10deg); }
+      60% { transform: rotate(0deg); }
+      100% { transform: rotate(0deg); }
+    }
+    
+    .bg-pattern {
+      background-image: radial-gradient(rgba(14, 165, 233, 0.1) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+  </style>
+</head>
+<body class="text-white">
+
+<!-- Hero Section -->
+<header class="hero-gradient py-20 relative overflow-hidden">
+  <div class="absolute inset-0 bg-pattern opacity-10"></div>
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0">
+        <h1 class="text-5xl font-bold mb-4">Sugandham Sudheer</h1>
+        <p class="text-xl opacity-90 mb-6">Full Stack Developer | ML Enthusiast | B.Tech CSE</p>
+        <div class="flex space-x-4">
+          <a href="#contact" class="bg-white text-cyan-600 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-all">
+            Contact Me
+          </a>
+          <a href="#projects" class="border-2 border-white text-white px-6 py-2 rounded-full font-medium hover:bg-white hover:bg-opacity-10 transition-all">
+            View Projects
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <div class="relative w-64 h-64">
+          <div class="absolute inset-0 bg-cyan-400 rounded-full opacity-20 blur-xl"></div>
+          <div class="absolute inset-4 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full flex items-center justify-center floating">
+            <i class="fas fa-laptop-code text-white text-6xl"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- About Me -->
+<section class="max-w-5xl mx-auto px-6 py-20" id="about">
+  <h2 class="text-3xl font-bold mb-10 section-title">About Me</h2>
+  <div class="grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <p class="text-lg text-gray-300 leading-relaxed mb-6">
+        I am a passionate Full Stack Developer with a strong foundation in Computer Science and a keen interest in Artificial Intelligence.
+        My journey in technology is driven by a desire to create innovative solutions that make a difference.
+      </p>
+      <p class="text-lg text-gray-300 leading-relaxed">
+        I've built real-time full-stack apps and integrated machine learning into web applications. I also completed an internship at HCLTech,
+        where I led a team in developing a cycle monitoring system using PHP, JS, and MySQL.
+      </p>
+    </div>
+    <div class="bg-slate-800 p-6 rounded-xl border border-slate-700">
+      <div class="mb-4">
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Education</h3>
+        <p class="text-gray-300">B.Tech in Computer Science & Engineering</p>
+        <p class="text-sm text-gray-400">2020 - 2024</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold text-cyan-300 mb-2">Experience</h3>
+        <p class="text-gray-300">Intern at HCLTech</p>
+        <p class="text-sm text-gray-400">2023 - 3 months</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section class="max-w-6xl mx-auto px-6 py-20 bg-slate-900 bg-opacity-50" id="skills">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold mb-10 section-title">My Skills</h2>
+
+    <h3 class="text-2xl font-semibold text-cyan-300 mb-6">Technical Skills</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">Python</p>
+          <span class="text-cyan-300">90%</span>
+        </div>
+        <div class="progress-bar" style="width: 90%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">HTML/CSS</p>
+          <span class="text-cyan-300">90%</span>
+        </div>
+        <div class="progress-bar" style="width: 90%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">JavaScript</p>
+          <span class="text-cyan-300">80%</span>
+        </div>
+        <div class="progress-bar" style="width: 80%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">SQL</p>
+          <span class="text-cyan-300">85%</span>
+        </div>
+        <div class="progress-bar" style="width: 85%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">PHP</p>
+          <span class="text-cyan-300">75%</span>
+        </div>
+        <div class="progress-bar" style="width: 75%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">Java</p>
+          <span class="text-cyan-300">70%</span>
+        </div>
+        <div class="progress-bar" style="width: 70%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">C++</p>
+          <span class="text-cyan-300">65%</span>
+        </div>
+        <div class="progress-bar" style="width: 65%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">Flask</p>
+          <span class="text-cyan-300">85%</span>
+        </div>
+        <div class="progress-bar" style="width: 85%;"></div>
+      </div>
+      <div class="skill-card">
+        <div class="flex justify-between items-center mb-2">
+          <p class="font-medium">MySQL</p>
+          <span class="text-cyan-300">75%</span>
+        </div>
+        <div class="progress-bar" style="width: 75%;"></div>
+      </div>
+    </div>
+
+    <h3 class="text-2xl font-semibold text-cyan-300 mb-6">Soft Skills</h3>
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-users text-cyan-300 mb-2"></i>
+        <p>Leadership</p>
+      </div>
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-hands-helping text-cyan-300 mb-2"></i>
+        <p>Teamwork</p>
+      </div>
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-comments text-cyan-300 mb-2"></i>
+        <p>Communication</p>
+      </div>
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-clock text-cyan-300 mb-2"></i>
+        <p>Time Management</p>
+      </div>
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-lightbulb text-cyan-300 mb-2"></i>
+        <p>Problem Solving</p>
+      </div>
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-random text-cyan-300 mb-2"></i>
+        <p>Adaptability</p>
+      </div>
+      <div class="skill-card text-center py-3">
+        <i class="fas fa-brain text-cyan-300 mb-2"></i>
+        <p>Critical Thinking</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Projects -->
+<section class="max-w-6xl mx-auto px-6 py-20" id="projects">
+  <h2 class="text-3xl font-bold mb-10 section-title">Projects</h2>
+  <div class="grid md:grid-cols-2 gap-6">
+
+    <div class="project-card">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">🚲</span>
+        <h3 class="text-xl font-bold text-cyan-300">Bicyclo</h3>
+      </div>
+      <p class="text-gray-300 mb-4">A full-stack web app built during HCLTech internship to monitor bicycle usage using PHP, MySQL, HTML/CSS/JS.</p>
+      <div class="flex space-x-3">
+        <a href="https://github.com/sudhher1s/Bicyclelo" target="_blank" class="text-sm bg-cyan-600 hover:bg-cyan-700 px-3 py-1 rounded-full transition-all">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">🚨</span>
+        <h3 class="text-xl font-bold text-cyan-300">Anti Sleep Alarm for Drivers</h3>
+      </div>
+      <p class="text-gray-300 mb-4">IoT-based system that triggers alarm when the driver is sleepy and gradually slows down or stops the vehicle safely.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">🩺</span>
+        <h3 class="text-xl font-bold text-cyan-300">Emergency Medical Info Finder</h3>
+      </div>
+      <p class="text-gray-300 mb-4">A platform to search for nearby hospitals, blood banks, or pharmacies with required treatments, medicines or availability.</p>
+    </div>
+
+    <div class="project-card">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">🌾</span>
+        <h3 class="text-xl font-bold text-cyan-300">Friendly Farmer</h3>
+      </div>
+      <p class="text-gray-300 mb-4">A QR code-based system for passenger safety using Flask, OpenCage API, location tracking, and email alerting.</p>
+      <div class="flex space-x-3">
+        <a href="https://github.com/sudhher1s/FRIENDLY-FARMER" target="_blank" class="text-sm bg-cyan-600 hover:bg-cyan-700 px-3 py-1 rounded-full transition-all">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">❤️</span>
+        <h3 class="text-xl font-bold text-cyan-300">Heart Disease Prediction</h3>
+      </div>
+      <p class="text-gray-300 mb-4">ML-based web app to predict heart disease risks using medical data, built with Flask and ML libraries.</p>
+      <div class="flex space-x-3">
+        <a href="https://github.com/sudhher1s/BASIC-HEART-DISEASE-PREDICTION-USING-ML" target="_blank" class="text-sm bg-cyan-600 hover:bg-cyan-700 px-3 py-1 rounded-full transition-all">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">📚</span>
+        <h3 class="text-xl font-bold text-cyan-300">Student Performance Predictor</h3>
+      </div>
+      <p class="text-gray-300 mb-4">A machine learning model that analyzes student data and predicts performance through a Flask web interface.</p>
+      <div class="flex space-x-3">
+        <a href="https://github.com/sudhher1s/STUDENT-PERFORMENCE-PREDICTION" target="_blank" class="text-sm bg-cyan-600 hover:bg-cyan-700 px-3 py-1 rounded-full transition-all">
+          View on GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section class="py-20 bg-slate-800 relative overflow-hidden" id="contact">
+  <div class="absolute inset-0 bg-pattern opacity-10"></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <h2 class="text-3xl font-bold mb-10 section-title">Get In Touch</h2>
+    <p class="text-xl mb-10 max-w-2xl mx-auto">I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll get back to you as soon as possible!</p>
+    
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <a href="mailto:sudheersugandham@gmail.com" class="contact-link">
+        <div class="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-all">
+          <i class="fas fa-envelope text-3xl text-cyan-300 mb-3"></i>
+          <h3 class="text-xl font-medium mb-1">Email</h3>
+          <p class="text-gray-300 text-sm">sudheersugandham@gmail.com</p>
+        </div>
+      </a>
+      <a href="https://github.com/sudhher1s" target="_blank" class="contact-link">
+        <div class="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-all">
+          <i class="fab fa-github text-3xl text-cyan-300 mb-3"></i>
+          <h3 class="text-xl font-medium mb-1">GitHub</h3>
+          <p class="text-gray-300 text-sm">github.com/sudhher1s</p>
+        </div>
+      </a>
+      <a href="https://www.linkedin.com/in/sugandhamsudheer/" target="_blank" class="contact-link">
+        <div class="bg-slate-700 p-6 rounded-xl hover:bg-slate-600 transition-all">
+          <i class="fab fa-linkedin text-3xl text-cyan-300 mb-3"></i>
+          <h3 class="text-xl font-medium mb-1">LinkedIn</h3>
+          <p class="text-gray-300 text-sm">linkedin.com/in/sugandhamsudheer</p>
+        </div>
+      </a>
+    </div>
+    
+    <div class="flex justify-center space-x-6">
+      <a href="mailto:sudheersugandham@gmail.com" class="text-2xl text-gray-300 hover:text-cyan-300 transition-all">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/sudhher1s" target="_blank" class="text-2xl text-gray-300 hover:text-cyan-300 transition-all">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/sugandhamsudheer/" target="_blank" class="text-2xl text-gray-300 hover:text-cyan-300 transition-all">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="#" class="text-2xl text-gray-300 hover:text-cyan-300 transition-all">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-6 bg-slate-900 text-gray-400 text-sm">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="mb-2">
+      <a href="#about" class="hover:text-cyan-300 transition-all mx-2">About</a>
+      <a href="#skills" class="hover:text-cyan-300 transition-all mx-2">Skills</a>
+      <a href="#projects" class="hover:text-cyan-300 transition-all mx-2">Projects</a>
+      <a href="#contact" class="hover:text-cyan-300 transition-all mx-2">Contact</a>
+    </div>
+    <p>&copy; 2025 Sugandham Sudheer. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Smooth scrolling for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  
+  // Animate progress bars on scroll
+  const animateOnScroll = () => {
+    const progressBars = document.querySelectorAll('.progress-bar');
+    progressBars.forEach(bar => {
+      const rect = bar.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.8) {
+        bar.style.width = bar.style.width;
+      }
+    });
+  };
+  
+  window.addEventListener('scroll', animateOnScroll);
+  window.addEventListener('load', animateOnScroll);
+</script>
+
+</body>
+</html>
