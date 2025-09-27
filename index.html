@@ -350,7 +350,7 @@
         </div>
         <div class="skill-card">
           <div class="flex justify-between items-center mb-2">
-            <p class="font-medium">MongoDB</p>
+            <p class="font-medium">SQLAlchemy</p>
             <span class="text-cyan-300">80%</span>
           </div>
           <div class="progress-bar" style="width: 80%;"></div>
@@ -384,7 +384,7 @@
         </div>
         <div class="skill-card">
           <div class="flex justify-between items-center mb-2">
-            <p class="font-medium">Computer Vision</p>
+            <p class="font-medium">Plotly</p>
             <span class="text-cyan-300">75%</span>
           </div>
           <div class="progress-bar" style="width: 75%;"></div>
@@ -402,6 +402,33 @@
             <span class="text-cyan-300">85%</span>
           </div>
           <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-8">
+      <h3 class="tech-category text-xl font-semibold">Data Visualization & Maps</h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="skill-card">
+          <div class="flex justify-between items-center mb-2">
+            <p class="font-medium">Folium</p>
+            <span class="text-cyan-300">80%</span>
+          </div>
+          <div class="progress-bar" style="width: 80%;"></div>
+        </div>
+        <div class="skill-card">
+          <div class="flex justify-between items-center mb-2">
+            <p class="font-medium">Chart.js</p>
+            <span class="text-cyan-300">75%</span>
+          </div>
+          <div class="progress-bar" style="width: 75%;"></div>
+        </div>
+        <div class="skill-card">
+          <div class="flex justify-between items-center mb-2">
+            <p class="font-medium">Leaflet.js</p>
+            <span class="text-cyan-300">75%</span>
+          </div>
+          <div class="progress-bar" style="width: 75%;"></div>
         </div>
       </div>
     </div>
@@ -545,7 +572,45 @@
   <h2 class="text-3xl font-bold mb-10 section-title">Projects</h2>
   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-    <!-- New Projects -->
+    <!-- New Featured Project -->
+    <div class="project-card lg:col-span-2">
+      <div class="flex items-center mb-3">
+        <span class="project-icon">🚀</span>
+        <h3 class="text-xl font-bold text-cyan-300">Smart Waste Route Optimizer</h3>
+      </div>
+      <p class="text-gray-300 mb-4">
+        An end-to-end intelligent waste management system that transforms urban sanitation through AI and data science. 
+        Features real-time IoT sensor data processing, ML-powered predictions with 90%+ accuracy, and optimized collection 
+        routes for 5+ vehicles across 111+ waste bins in Delhi. Achieves 20-35% reduction in fuel costs & CO2 emissions.
+      </p>
+      <div class="mb-4">
+        <p class="text-sm text-cyan-200 mb-2"><strong>Key Features:</strong></p>
+        <ul class="text-xs text-gray-300 space-y-1 mb-3">
+          <li>• Interactive dashboards with live route visualization</li>
+          <li>• ML predictions for bin fill levels (24-48h ahead)</li>
+          <li>• Real-time priority alerts for overflow prevention</li>
+          <li>• Cost savings analysis with ROI metrics</li>
+          <li>• 160 items/minute AI sorting vs 50 manual sorting</li>
+        </ul>
+      </div>
+      <div class="flex flex-wrap gap-2 mb-4">
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">Flask</span>
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">SQLAlchemy</span>
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">SQLite</span>
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">Scikit-learn</span>
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">Folium</span>
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">Plotly</span>
+        <span class="text-xs bg-emerald-900 text-emerald-200 px-2 py-1 rounded-full">Chart.js</span>
+      </div>
+      <div class="flex space-x-3">
+        <a href="https://lnkd.in/g8tkiRR6" target="_blank" class="text-sm bg-cyan-600 hover:bg-cyan-700 px-3 py-1 rounded-full transition-all">
+          View on GitHub
+        </a>
+        <span class="text-sm bg-emerald-600 px-3 py-1 rounded-full">Featured Project</span>
+      </div>
+    </div>
+
+    <!-- Other Projects -->
     <div class="project-card">
       <div class="flex items-center mb-3">
         <span class="project-icon">🏙️</span>
@@ -553,11 +618,11 @@
       </div>
       <p class="text-gray-300 mb-4">
         A comprehensive Flask web application for community issue reporting with user authentication, 
-        image uploads, MongoDB integration, and email notifications for efficient urban problem management.
+        image uploads, SQLite database integration, and email notifications for efficient urban problem management.
       </p>
       <div class="flex flex-wrap gap-2 mb-4">
         <span class="text-xs bg-cyan-900 text-cyan-200 px-2 py-1 rounded-full">Flask</span>
-        <span class="text-xs bg-cyan-900 text-cyan-200 px-2 py-1 rounded-full">MongoDB</span>
+        <span class="text-xs bg-cyan-900 text-cyan-200 px-2 py-1 rounded-full">SQLite</span>
         <span class="text-xs bg-cyan-900 text-cyan-200 px-2 py-1 rounded-full">Bootstrap</span>
         <span class="text-xs bg-cyan-900 text-cyan-200 px-2 py-1 rounded-full">JavaScript</span>
       </div>
@@ -575,11 +640,11 @@
       </div>
       <p class="text-gray-300 mb-4">
         Flask application that tracks community sustainability initiatives with user authentication, 
-        file uploads, and comprehensive monitoring of environmental projects and their impact.
+        file uploads, SQLite database, and comprehensive monitoring of environmental projects and their impact.
       </p>
       <div class="flex flex-wrap gap-2 mb-4">
         <span class="text-xs bg-green-900 text-green-200 px-2 py-1 rounded-full">Flask</span>
-        <span class="text-xs bg-green-900 text-green-200 px-2 py-1 rounded-full">MongoDB</span>
+        <span class="text-xs bg-green-900 text-green-200 px-2 py-1 rounded-full">SQLite</span>
         <span class="text-xs bg-green-900 text-green-200 px-2 py-1 rounded-full">HTML/CSS</span>
         <span class="text-xs bg-green-900 text-green-200 px-2 py-1 rounded-full">Email Integration</span>
       </div>
@@ -604,57 +669,6 @@
         <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full">Quantum Computing</span>
         <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full">Streamlit</span>
         <span class="text-xs bg-purple-900 text-purple-200 px-2 py-1 rounded-full">NewsAPI</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="flex items-center mb-3">
-        <span class="project-icon">🚗</span>
-        <h3 class="text-xl font-bold text-cyan-300">YOLOv9 Accident Detection</h3>
-      </div>
-      <p class="text-gray-300 mb-4">
-        Real-time road accident detection system using YOLOv9 for object and event detection in video streams, 
-        with automated email alerts for emergency response and safety monitoring.
-      </p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="text-xs bg-red-900 text-red-200 px-2 py-1 rounded-full">YOLOv9</span>
-        <span class="text-xs bg-red-900 text-red-200 px-2 py-1 rounded-full">Computer Vision</span>
-        <span class="text-xs bg-red-900 text-red-200 px-2 py-1 rounded-full">Python</span>
-        <span class="text-xs bg-red-900 text-red-200 px-2 py-1 rounded-full">Deep Learning</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="flex items-center mb-3">
-        <span class="project-icon">🌐</span>
-        <h3 class="text-xl font-bold text-cyan-300">Network Protocol Simulator</h3>
-      </div>
-      <p class="text-gray-300 mb-4">
-        Implementation of computer network protocols including Selective Repeat and Go-Back-N protocols 
-        in C language with comprehensive simulation of windowing, timeouts, and retransmission mechanisms.
-      </p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="text-xs bg-orange-900 text-orange-200 px-2 py-1 rounded-full">C Programming</span>
-        <span class="text-xs bg-orange-900 text-orange-200 px-2 py-1 rounded-full">Network Protocols</span>
-        <span class="text-xs bg-orange-900 text-orange-200 px-2 py-1 rounded-full">Simulation</span>
-        <span class="text-xs bg-orange-900 text-orange-200 px-2 py-1 rounded-full">Algorithm Design</span>
-      </div>
-    </div>
-
-    <div class="project-card">
-      <div class="flex items-center mb-3">
-        <span class="project-icon">📹</span>
-        <h3 class="text-xl font-bold text-cyan-300">Surveillance Accident Detection</h3>
-      </div>
-      <p class="text-gray-300 mb-4">
-        Advanced accident detection system using surveillance video analysis with deep learning approaches 
-        for anomaly recognition, focusing on traffic safety and automated incident response.
-      </p>
-      <div class="flex flex-wrap gap-2 mb-4">
-        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Deep Learning</span>
-        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Video Analysis</span>
-        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Computer Vision</span>
-        <span class="text-xs bg-blue-900 text-blue-200 px-2 py-1 rounded-full">Anomaly Detection</span>
       </div>
     </div>
 
